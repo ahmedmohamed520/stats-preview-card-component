@@ -32,8 +32,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
+    padding: 2rem 0;
 }
 .card {
     width: 940px;
@@ -104,6 +105,27 @@ body {
     display: none;
 }
 
-/* 
-    font-family: "Lexend Deca", sans-serif;
-     */
+@media only screen and (max-width: 800px) {
+    .card {
+        grid-template-columns: 1fr;
+        width: 540px;
+    }
+    .card-body {
+        order: 1;
+        padding: 2rem;
+        text-align: center;
+    }
+    .card-text {
+        margin-bottom: 2rem;
+    }
+    .overlay,
+    .card-image img {
+        border-radius: 10px 10px 0 0;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .stats {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
